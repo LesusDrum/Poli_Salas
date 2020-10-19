@@ -35,7 +35,8 @@ class SalasController extends Controller
      */
     public function create()
     {
-        //
+        $blocos=$this->objBloco->all();
+        return view('salas_create', compact('blocos'));
     }
 
     /**
@@ -46,7 +47,14 @@ class SalasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cad = $this->objSala->create([
+            'nome_sala'=>$request->nome_sala,
+            'descricao_sala'=>$request->descricao_sala,
+            'cod_bloco'=>$request->cod_bloco,
+        ]);
+        if($cad){
+            return redirect('salas');
+        }
     }
 
     /**
@@ -66,9 +74,11 @@ class SalasController extends Controller
      * @param  \App\Models\Salas  $salas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Salas $salas)
+    public function edit($id)
     {
-        //
+        $salas=$this->objSala->find($id);
+        $blocos=$this->objBloco->all();
+        return view('salas_create', compact('salas','blocos'));
     }
 
     /**
@@ -78,9 +88,16 @@ class SalasController extends Controller
      * @param  \App\Models\Salas  $salas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Salas $salas)
+    public function update(Request $request, $cod_sala)
     {
-        //
+        $edit = $this->objSala->where(['cod_sala'=>$cod_sala])->update([
+            'nome_sala'=>$request->nome_sala,
+            'descricao_sala'=>$request->descricao_sala,
+            'cod_bloco'=>$request->cod_bloco,
+        ]);
+        if($edit){
+            return redirect('salas');
+        }
     }
 
     /**

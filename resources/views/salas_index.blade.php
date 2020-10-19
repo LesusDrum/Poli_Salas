@@ -37,7 +37,17 @@
                                                             <td>{{$bloco->nome_bloco}}</td>
                                                             <td>{{$salas->nome_sala}}</td>
                                                             <td>{{$salas->descricao_sala}}</td>
-                                                            <td><!-- ";
+                                                            <td>
+                                                            
+                                                                <a href="{{url("salas/$salas->cod_sala/edit")}}">
+                                                                <button type='submit' class='btn btn-warning btn-circle'><i class='fa fa-pencil-square-o'></i></button>
+                                                                </a>
+
+                                                                <a href="{{url("salas/$salas->cod_sala")}}" class="js-del">
+                                                                <button type='submit' class='btn btn-danger btn-circle'><i class='fa fa-trash'></i></button>
+                                                                </a>
+
+                                                            <!-- ";
                                                             if ($nivel == "Aluno(a)"){
                                                                 echo "<form>
                                                                     <button class = 'btn btn-warning disabled' role = 'buttons' type = 'submit'>Editar</button>
@@ -66,6 +76,12 @@
                                             </tbody>
                                         </table>
                                         {{$sala->links()}}
+                                        <div class="text-center mt-4 mb-3">
+                                        <a href="{{url('salas/create')}}">
+                                        <button class="btn btn-success">Cadastrar</button>
+                                        </a>
+
+                        </div>
                   
                                     </div>
                                     <!-- /.table-responsive -->
