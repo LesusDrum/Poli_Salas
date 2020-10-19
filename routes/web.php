@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SalasController;
+use App\Http\Controllers\PeriodosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('salas', SalasController::class);
+Route::resource('periodos', PeriodosController::class);

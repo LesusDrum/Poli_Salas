@@ -35,7 +35,7 @@
                                                 <a href="tables_subjects.php"><i class = "fa fa-book fa-fw"></i> Disciplinas</a>
                                             </li>
                                             <li>
-                                                <a href="tables_periods.php"><i class = "fa fa-hourglass fa-fw"></i> Períodos</a>
+                                                <a href="periodos"><i class = "fa fa-hourglass fa-fw"></i> Períodos</a>
                                             </li>
                                             <li>
                                                 <a href="tables_reservations.php"><i class = "fa fa-tags fa-fw"></i> Reservas</a>
