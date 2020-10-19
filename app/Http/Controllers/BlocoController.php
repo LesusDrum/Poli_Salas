@@ -2,21 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BookRequest;
-use App\Models\Salas;
 use App\Models\Blocos;
 use Illuminate\Http\Request;
 
-class SalasController extends Controller
+class BlocoController extends Controller
 {
-    private $objBloco;
-    private $objSala;
-
-    public function __construct() 
-    {
-        $this->objBloco=new Blocos();
-        $this->objSala=new Salas();
-    }
     /**
      * Display a listing of the resource.
      *
@@ -24,8 +14,7 @@ class SalasController extends Controller
      */
     public function index()
     {
-        $sala=$this->objSala->paginate(10);
-        return view('salas_index', compact('sala'));
+        //
     }
 
     /**
@@ -52,10 +41,10 @@ class SalasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Salas  $salas
+     * @param  \App\Models\Blocos  $blocos
      * @return \Illuminate\Http\Response
      */
-    public function show(Salas $salas)
+    public function show(Blocos $blocos)
     {
         //
     }
@@ -63,10 +52,10 @@ class SalasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Salas  $salas
+     * @param  \App\Models\Blocos  $blocos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Salas $salas)
+    public function edit(Blocos $blocos)
     {
         //
     }
@@ -75,10 +64,10 @@ class SalasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Salas  $salas
+     * @param  \App\Models\Blocos  $blocos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Salas $salas)
+    public function update(Request $request, Blocos $blocos)
     {
         //
     }
@@ -86,10 +75,10 @@ class SalasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Salas  $salas
+     * @param  \App\Models\Blocos  $blocos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Salas $salas)
+    public function destroy(Blocos $blocos)
     {
         //
     }
