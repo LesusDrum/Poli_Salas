@@ -109,6 +109,7 @@
      
         <!-- DataTables JavaScript -->
         <script src="{{url('assets/j-query/jquery-3.5.1.js')}}"></script>
+        <script src="{{url('assets/js/javascript.js')}}"></script>
         <script src="{{url('assets/j-query/jquery.dataTables.min.js')}}"></script>
         <script>
             $(document).ready(function() {

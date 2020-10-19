@@ -106,8 +106,9 @@ class SalasController extends Controller
      * @param  \App\Models\Salas  $salas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Salas $salas)
+    public function destroy($id)
     {
-        //
+        $del = $this->objSala->destroy($id);
+        return($del)?"sim":"não";
     }
 }
